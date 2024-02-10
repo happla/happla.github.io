@@ -1,0 +1,37 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  position: relative;
+}
+
+.remove-btn,
+.done-btn {
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  right: 60px; /* Adjusted position to make room for the done button */
+}
+
+.done-btn {
+  right: 10px;
+}
+
+.done {
+  background-color: #90EE90;
+}
