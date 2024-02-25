@@ -35,11 +35,20 @@
             });
             li.appendChild(removeBtn);
             
+            
             // Add done button to the task
             const doneBtn = document.createElement('button');
-            doneBtn.textContent = 'Done';
+            doneBtn.textContent = task.completed ? 'Undone' : 'Done';
             doneBtn.className = 'done-btn';
             doneBtn.addEventListener('click', function() {
+              // Toggle the text of the button
+    if (doneBtn.textContent === 'Done') {
+      doneBtn.textContent = 'Undone';
+      // You can also add additional styling or class changes here
+  } else {
+      doneBtn.textContent = 'Done';
+      // Revert any styling or class changes if needed
+  }
                 task.completed = !task.completed;
                 saveTasks(tasks);
                 renderTasks();
@@ -73,3 +82,5 @@
             addTask();
         }
     });
+
+    
